@@ -1,0 +1,23 @@
+{
+  "name": "login-api-aluxion",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./server.js"
+  },
+  "keywords": [],
+  "author": "Nestor Cortina",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "helmet": "^4.6.0",
+    "joi": "^17.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.1.1",
+    "nodemailer": "^6.6.3",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "bin": "./server.js"
+}
