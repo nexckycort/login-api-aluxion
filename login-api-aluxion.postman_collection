@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "de7cb827-52bb-49ce-a185-1520c89659e1",
+		"name": "file-upload-aluxion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "validar token",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/api/v1.0/validate-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1.0",
+						"validate-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "iniciar session",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "xd",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"junior110120@gmail.com\",\r\n    \"password\": \"110120\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/v1.0/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1.0",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear usuario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "xd",
+						"value": "1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Nestor\",\r\n    \"email\": \"junior110120@gmail.com\",\r\n    \"password\": \"110120\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/v1.0/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1.0",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enviar correo para restaurar contraseña",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"junior110120@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/v1.0/restore-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1.0",
+						"restore-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "restaurar contraseña",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"110120\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/v1.0/restore-password/ab121d35158023b0fe06f8f3a16f522bd1db21a8329b336135058cf4af1e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v1.0",
+						"restore-password",
+						"ab121d35158023b0fe06f8f3a16f522bd1db21a8329b336135058cf4af1e"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
